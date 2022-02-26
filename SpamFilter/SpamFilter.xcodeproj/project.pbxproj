@@ -16,6 +16,8 @@
 		CE3823D527BC897300715A25 /* SpamFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3823D427BC897300715A25 /* SpamFilterTests.swift */; };
 		CE3823DF27BC897300715A25 /* SpamFilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3823DE27BC897300715A25 /* SpamFilterUITests.swift */; };
 		CE3823E127BC897300715A25 /* SpamFilterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3823E027BC897300715A25 /* SpamFilterUITestsLaunchTests.swift */; };
+		CEDD7D4327CA051D009DC29E /* MessageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD7D4227CA051D009DC29E /* MessageFilterExtension.swift */; };
+		CEDD7D4727CA051D009DC29E /* SpamFilterExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CEDD7D4027CA051D009DC29E /* SpamFilterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +35,28 @@
 			remoteGlobalIDString = CE3823B927BC897100715A25;
 			remoteInfo = SpamFilter;
 		};
+		CEDD7D4527CA051D009DC29E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3823B227BC897100715A25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEDD7D3F27CA051D009DC29E;
+			remoteInfo = SpamFilterExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CEDD7D4827CA051D009DC29E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CEDD7D4727CA051D009DC29E /* SpamFilterExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CE3823BA27BC897100715A25 /* SpamFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpamFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +72,9 @@
 		CE3823DA27BC897300715A25 /* SpamFilterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpamFilterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3823DE27BC897300715A25 /* SpamFilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpamFilterUITests.swift; sourceTree = "<group>"; };
 		CE3823E027BC897300715A25 /* SpamFilterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpamFilterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEDD7D4027CA051D009DC29E /* SpamFilterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SpamFilterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDD7D4227CA051D009DC29E /* MessageFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterExtension.swift; sourceTree = "<group>"; };
+		CEDD7D4427CA051D009DC29E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +99,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEDD7D3D27CA051D009DC29E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +115,7 @@
 				CE3823BC27BC897100715A25 /* SpamFilter */,
 				CE3823D327BC897300715A25 /* SpamFilterTests */,
 				CE3823DD27BC897300715A25 /* SpamFilterUITests */,
+				CEDD7D4127CA051D009DC29E /* SpamFilterExtension */,
 				CE3823BB27BC897100715A25 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +126,7 @@
 				CE3823BA27BC897100715A25 /* SpamFilter.app */,
 				CE3823D027BC897300715A25 /* SpamFilterTests.xctest */,
 				CE3823DA27BC897300715A25 /* SpamFilterUITests.xctest */,
+				CEDD7D4027CA051D009DC29E /* SpamFilterExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +162,15 @@
 			path = SpamFilterUITests;
 			sourceTree = "<group>";
 		};
+		CEDD7D4127CA051D009DC29E /* SpamFilterExtension */ = {
+			isa = PBXGroup;
+			children = (
+				CEDD7D4227CA051D009DC29E /* MessageFilterExtension.swift */,
+				CEDD7D4427CA051D009DC29E /* Info.plist */,
+			);
+			path = SpamFilterExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,10 +181,12 @@
 				CE3823B627BC897100715A25 /* Sources */,
 				CE3823B727BC897100715A25 /* Frameworks */,
 				CE3823B827BC897100715A25 /* Resources */,
+				CEDD7D4827CA051D009DC29E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CEDD7D4627CA051D009DC29E /* PBXTargetDependency */,
 			);
 			name = SpamFilter;
 			productName = SpamFilter;
@@ -183,6 +229,23 @@
 			productReference = CE3823DA27BC897300715A25 /* SpamFilterUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		CEDD7D3F27CA051D009DC29E /* SpamFilterExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDD7D4B27CA051D009DC29E /* Build configuration list for PBXNativeTarget "SpamFilterExtension" */;
+			buildPhases = (
+				CEDD7D3C27CA051D009DC29E /* Sources */,
+				CEDD7D3D27CA051D009DC29E /* Frameworks */,
+				CEDD7D3E27CA051D009DC29E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpamFilterExtension;
+			productName = SpamFilterExtension;
+			productReference = CEDD7D4027CA051D009DC29E /* SpamFilterExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +267,9 @@
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = CE3823B927BC897100715A25;
 					};
+					CEDD7D3F27CA051D009DC29E = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 				};
 			};
 			buildConfigurationList = CE3823B527BC897100715A25 /* Build configuration list for PBXProject "SpamFilter" */;
@@ -222,6 +288,7 @@
 				CE3823B927BC897100715A25 /* SpamFilter */,
 				CE3823CF27BC897300715A25 /* SpamFilterTests */,
 				CE3823D927BC897300715A25 /* SpamFilterUITests */,
+				CEDD7D3F27CA051D009DC29E /* SpamFilterExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -245,6 +312,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CE3823D827BC897300715A25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDD7D3E27CA051D009DC29E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -281,6 +355,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEDD7D3C27CA051D009DC29E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDD7D4327CA051D009DC29E /* MessageFilterExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,6 +375,11 @@
 			isa = PBXTargetDependency;
 			target = CE3823B927BC897100715A25 /* SpamFilter */;
 			targetProxy = CE3823DB27BC897300715A25 /* PBXContainerItemProxy */;
+		};
+		CEDD7D4627CA051D009DC29E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEDD7D3F27CA051D009DC29E /* SpamFilterExtension */;
+			targetProxy = CEDD7D4527CA051D009DC29E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -435,6 +522,7 @@
 		CE3823E527BC897300715A25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -451,7 +539,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = j.won.SpamFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -463,6 +551,7 @@
 		CE3823E627BC897300715A25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -479,7 +568,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = j.won.SpamFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -564,6 +653,56 @@
 			};
 			name = Release;
 		};
+		CEDD7D4927CA051D009DC29E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JLWS3ZRS8N;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpamFilterExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SpamFilterExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = j.won.SpamFilter.SpamFilterExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEDD7D4A27CA051D009DC29E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JLWS3ZRS8N;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpamFilterExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SpamFilterExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = j.won.SpamFilter.SpamFilterExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -599,6 +738,15 @@
 			buildConfigurations = (
 				CE3823EB27BC897300715A25 /* Debug */,
 				CE3823EC27BC897300715A25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDD7D4B27CA051D009DC29E /* Build configuration list for PBXNativeTarget "SpamFilterExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDD7D4927CA051D009DC29E /* Debug */,
+				CEDD7D4A27CA051D009DC29E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
